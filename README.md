@@ -20,19 +20,19 @@ It's a bit like XML. Very clear for computers, but also human-readable.
 This format is supported in the data package of Processing 2.0, so it can be used without additional libraries.
 
 This uniformity in authentication and response format allows me to solve problems once and apply the solutions to multiple cases.
-Even though there are of course always particularities between the different socials networks.
+Even though there are of course always particularities between the different social networks.
 
 The code in this repository will focus on the following things:
 
 - Authentication through OAuth
-- Sending API requests
+- Sending API requests to the mentioned social networks
 - Caching data locally in JSON files
 - Visualizing the data
 - Assorted utility sketches
 
 Code is work-in-progress, no warranties, no guarantees, shared in the spirit of open source.
 
-Code written in Processing 2.0.1
+Code written in Processing 2.0.1.
 
 ####CreateKeysJSON
 Small utility sketch that saves the 4 required authentication strings and the network name in a JSON file.
