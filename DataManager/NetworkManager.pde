@@ -29,7 +29,8 @@ class NetworkManager {
       }
       if (bDebug) {
         if (namesOfLocalNetworks.size() > 0) {
-          println("The Network Manager found " + namesOfLocalNetworks.size() + " locally stored networks: " + namesOfLocalNetworks);
+          println("The Network Manager found " + namesOfLocalNetworks.size()
+          + " locally stored networks: " + namesOfLocalNetworks);
         } else {
           println("No local networks were found.");
         }

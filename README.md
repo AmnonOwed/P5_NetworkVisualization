@@ -36,3 +36,6 @@ Code written in Processing 2.0.1.
 
 ####CreateKeysJSON
 Small utility sketch that saves the 4 required authentication strings and the network name in a JSON file.
+
+####DataManager
+I will be building this sketch from the ground up to handle authentication, API requests, local data caching, etc.
