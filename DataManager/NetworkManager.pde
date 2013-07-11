@@ -16,6 +16,7 @@ class NetworkManager {
   
   NetworkManager() {
     loadNamesOfLocalNetworks();
+    createTabsForLocalNetworks();
   }
   
   void loadNamesOfLocalNetworks() {
@@ -41,15 +42,32 @@ class NetworkManager {
     }
   }
   
-  void display() {
+  void createTabsForLocalNetworks() {
+    int w = width/(namesOfLocalNetworks.size()+1);
+    int h = 20;
+    // filed issue to change default Tab name: http://code.google.com/p/controlp5/issues/detail?id=80
+    cp5.getTab("default").activateEvent(true).setSize(w,h).setLabel("Networks");
+    for (String name : namesOfLocalNetworks) {
+      cp5.addTab(name).activateEvent(true).setSize(w,h);
+    }
+  }
+  
+  void run() {
+    if (currentTab.equals("default")) { displayLocalNetworkNames(); }
+  }
+  
+  void displayLocalNetworkNames() {
+    pushMatrix();
+    translate(50, 80);
     fill(0);
     textFont(fontBold);
-    text("LOCALLY FOUND NETWORKS (" + namesOfLocalNetworks.size() + ")", 100, 100);
+    text("LOCALLY FOUND NETWORKS (" + namesOfLocalNetworks.size() + ")", 0, 0);
     textFont(font);
     for (int i=0; i<namesOfLocalNetworks.size(); i++) {
       String name = namesOfLocalNetworks.get(i);
-      text("• " + name, 100, 130+i*30);
+      text("• " + name, 0, (i+1) * 30);
     }
+    popMatrix();
   }
 }
 

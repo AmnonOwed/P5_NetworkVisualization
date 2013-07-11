@@ -36,12 +36,13 @@
 // - a subfolder 'users' that stores user data from the network in JSON format locally
 String localPath = "C:/Documents and Settings/mainframe/My Documents/ProcessingSources/Networks/";
 
+boolean bFullScreen = false;
 boolean bDebug = true;
 PFont font, fontBold;
 NetworkManager nMan;
 
 void setup() {
-  size(1280, 720);
+  size(bFullScreen?displayWidth:1280, bFullScreen?displayHeight:720);
   setupControlP5();
   font = createFont("Arial", 13, true);
   fontBold = createFont("Arial Bold", 13, true);
@@ -50,6 +51,6 @@ void setup() {
 
 void draw() {
   background(255);
-  nMan.display();
+  nMan.run();
 }
 
