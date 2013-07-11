@@ -8,16 +8,16 @@ import org.scribe.oauth.*;
 import org.scribe.model.*;
 import org.scribe.exceptions.*;
 
-// The main control class that holds the different networks and handles:
-// - comparison and management of local network data
-// - authentication and interaction with web API's
 class NetworkManager {
   ArrayList <String> namesOfLocalNetworks = new ArrayList <String> ();
+  HashMap <String, Network> localNetworks;
   
   NetworkManager() {
     loadNamesOfLocalNetworks();
-    createTabsForLocalNetworks();
+    loadLocalNetworks();
   }
+  
+  // setup methods
   
   void loadNamesOfLocalNetworks() {
     File localNetworkFolder = new File(localPath);
@@ -42,32 +42,36 @@ class NetworkManager {
     }
   }
   
-  void createTabsForLocalNetworks() {
-    int w = width/(namesOfLocalNetworks.size()+1);
-    int h = 20;
-    // filed issue to change default Tab name: http://code.google.com/p/controlp5/issues/detail?id=80
-    cp5.getTab("default").activateEvent(true).setSize(w,h).setLabel("Networks");
+  void loadLocalNetworks() {
+    localNetworks = new HashMap <String, Network> (namesOfLocalNetworks.size());
     for (String name : namesOfLocalNetworks) {
-      cp5.addTab(name).activateEvent(true).setSize(w,h);
+      localNetworks.put(name, new Network(name));
     }
   }
+
+  // continuous methods
   
   void run() {
-    if (currentTab.equals("default")) { displayLocalNetworkNames(); }
+    Network localNetwork = localNetworks.get(currentTab);
+    if (localNetwork != null) { localNetwork.run(); }
   }
   
-  void displayLocalNetworkNames() {
-    pushMatrix();
-    translate(50, 80);
-    fill(0);
-    textFont(fontBold);
-    text("LOCALLY FOUND NETWORKS (" + namesOfLocalNetworks.size() + ")", 0, 0);
-    textFont(font);
-    for (int i=0; i<namesOfLocalNetworks.size(); i++) {
-      String name = namesOfLocalNetworks.get(i);
-      text("• " + name, 0, (i+1) * 30);
+  void drawTabIcons() {
+    for (String name : localNetworks.keySet()) {
+      localNetworks.get(name).displayTabIcon();
     }
-    popMatrix();
+  }
+
+  // getters
+  
+  ArrayList <String> getNamesOfLocalNetworks() {
+    return namesOfLocalNetworks;
+  }
+  
+  // setters
+  
+  void setNetworkIconPosition(String networkName, PVector p) {
+    localNetworks.get(networkName).tabIconPosDim.set(p.x, p.y, p.z);
   }
 }
 

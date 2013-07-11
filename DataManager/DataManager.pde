@@ -38,19 +38,20 @@ String localPath = "C:/Documents and Settings/mainframe/My Documents/ProcessingS
 
 boolean bFullScreen = false;
 boolean bDebug = true;
-PFont font, fontBold;
+int smoothLevel = 6;
+
 NetworkManager nMan;
 
 void setup() {
-  size(bFullScreen?displayWidth:1280, bFullScreen?displayHeight:720);
-  setupControlP5();
-  font = createFont("Arial", 13, true);
-  fontBold = createFont("Arial Bold", 13, true);
+  size(bFullScreen?displayWidth:1280, bFullScreen?displayHeight:720, P2D);
+  smooth(smoothLevel);
   nMan = new NetworkManager();
+  setupGUI();
 }
 
 void draw() {
   background(255);
   nMan.run();
+  drawGUI();
 }
 
