@@ -27,9 +27,10 @@ void setupTabsForLocalNetworks() {
     int h = tabHeight;
     for (int i=0; i<names.size(); i++) {
       String name = names.get(i);
-      cp5.addTab(name).activateEvent(true).setWidth(w).setHeight(h)
-         .getCaptionLabel().align(CENTER, CENTER);
-      nMan.setNetworkIconPosition(name, new PVector((w+4)*i+4, 4, tabHeight-8) );
+      cp5.addTab(name).activateEvent(true).setWidth(w).setHeight(h).getCaptionLabel().align(CENTER, CENTER);
+      Network network = nMan.getNetwork(name);
+      PVector tabIconPosDim = new PVector((w+4)*i+4, 4, tabHeight-8);
+      network.setTabIconPosDim(tabIconPosDim);
     }
     currentTab = names.get(0);
     cp5.getTab(currentTab).bringToFront();
@@ -44,7 +45,7 @@ void drawGUI() {
   cp5.draw();
   endRecord();
   image(pgControlP5, 0, 0);
-  nMan.drawTabIcons();
+  nMan.displayTabIcons();
 }
 
 void controlEvent(ControlEvent theControlEvent) {

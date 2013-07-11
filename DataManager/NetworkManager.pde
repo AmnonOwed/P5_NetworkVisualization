@@ -56,7 +56,7 @@ class NetworkManager {
     if (localNetwork != null) { localNetwork.run(); }
   }
   
-  void drawTabIcons() {
+  void displayTabIcons() {
     for (String name : localNetworks.keySet()) {
       localNetworks.get(name).displayTabIcon();
     }
@@ -67,11 +67,9 @@ class NetworkManager {
   ArrayList <String> getNamesOfLocalNetworks() {
     return namesOfLocalNetworks;
   }
-  
-  // setters
-  
-  void setNetworkIconPosition(String networkName, PVector p) {
-    localNetworks.get(networkName).tabIconPosDim.set(p.x, p.y, p.z);
+
+  Network getNetwork(String name) {
+    return localNetworks.get(name);
   }
 }
 
