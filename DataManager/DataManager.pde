@@ -15,7 +15,7 @@
  Note beforehand:
  The integration of all networks into a single sketch is a design choice, mainly for two reasons:
  1. It enables the user (aka me) to manage all the network data from a single command and control center.
- 2. It enables the programmer (aka me) to code efficiently and write a generic code base that can handle different networks.
+ 2. It enforces the programmer (aka me) to code efficiently and write a generic code base that can handle different networks.
  
  Note 2 beforehand:
  At the time of writing (July 11th 2013) this is just ideas, theories, plans and an empty skeleton sketch.
@@ -28,6 +28,10 @@
 
 */
 
+// Library imports as described above
+import controlP5.*;
+// relevant Scribe imports
+
 // The central path on YOUR computer where the local data for all networks is stored (keys, user data, images)
 // Each individual network folder will have it's 'Networkname' and contain:
 // - a file "Networkname-keys.json" as created with the 'CreateKeysJSON' sketch
@@ -38,7 +42,7 @@ String localPath = "C:/Documents and Settings/mainframe/My Documents/ProcessingS
 
 boolean bFullScreen = false;
 boolean bDebug = true;
-int smoothLevel = 6;
+int smoothLevel = 8;
 
 NetworkManager nMan;
 
@@ -50,6 +54,7 @@ void setup() {
 }
 
 void draw() {
+  preRenderGUI();
   background(255);
   nMan.run();
   drawGUI();

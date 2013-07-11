@@ -1,13 +1,4 @@
 
-import org.scribe.builder.*;
-import org.scribe.extractors.*;
-import org.scribe.builder.api.*;
-import org.scribe.services.*;
-import org.scribe.utils.*;
-import org.scribe.oauth.*;
-import org.scribe.model.*;
-import org.scribe.exceptions.*;
-
 class NetworkManager {
   ArrayList <String> namesOfLocalNetworks = new ArrayList <String> ();
   HashMap <String, Network> localNetworks;

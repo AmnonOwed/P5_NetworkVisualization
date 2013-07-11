@@ -1,8 +1,6 @@
 
 // this tab will contain all gui-related code (controlP5)
 
-import controlP5.*;
-
 ControlP5 cp5;
 
 String currentTab;
@@ -37,15 +35,28 @@ void setupTabsForLocalNetworks() {
   }
 }
 
-void drawGUI() {
-  // hack to draw ControlP5 into a JAVA2D PGraphics,
+void preRenderGUI() {
+  // temporary hack to draw ControlP5 into a JAVA2D PGraphics,
   // because the P2D/P3D renderers cause anti-aliasing text blur
+  // forum post: https://forum.processing.org/topic/controlp5-and-processing-2-0-p2d-p3d-renderers
+  // googlecode issue: http://code.google.com/p/controlp5/issues/detail?id=81 
   pgControlP5.clear();
   beginRecord(pgControlP5);
   cp5.draw();
   endRecord();
+}
+
+void drawGUI() {
   image(pgControlP5, 0, 0);
   nMan.displayTabIcons();
+  if (bDebug) {
+    fill(0);
+    textFont(fontBold);
+    text("DEBUG MODE", 6, height-17);
+    noStroke();
+    fill(255, 0, 0);
+    rect(0, height-10, width, 10);
+  }
 }
 
 void controlEvent(ControlEvent theControlEvent) {

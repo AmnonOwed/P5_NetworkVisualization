@@ -1,11 +1,11 @@
 
-class Icon {
+class NetworkIcon {
   boolean iconExists;
   color nColor, tColor;
   PVector tabPosDim;
   PShape iconShape;
 
-  Icon(String networkPath, String networkName) {
+  NetworkIcon(String networkPath, String networkName) {
     String iconPath = networkPath + networkName + "-icon.svg";    
     iconExists = new File(iconPath).isFile();
     if (iconExists) {
