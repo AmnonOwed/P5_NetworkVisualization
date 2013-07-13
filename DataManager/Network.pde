@@ -2,11 +2,15 @@
 class Network {
   String networkPath, networkName;
   NetworkIcon icon;
+  NetworkKeys keys;
+  NetworkApi api;
 
   Network(String name) {
     networkName = name;
     networkPath = localPath + name + "/";
     icon = new NetworkIcon(networkPath, networkName);
+    keys = new NetworkKeys(networkPath, networkName);
+    api = new NetworkApi(networkPath, networkName); 
   }
 
   // continuous methods
@@ -18,6 +22,30 @@ class Network {
 
   void displayTabIcon() {
     icon.displayTab();
+  }
+  
+  // getters
+
+  boolean iconLoaded() {
+    return icon.exists;
+  }
+  
+  boolean keysLoaded() {
+    return keys.exists;
+  }
+
+  boolean apiLoaded() {
+    return api.exists;
+  }
+  
+  String[] getInfo() {
+    return new String[] {
+      networkName,
+      str(iconLoaded()),
+      str(keysLoaded()),
+      str(apiLoaded()),
+      bNoKeyNetworkTabs?"true":str(keysLoaded())
+    };
   }
 
   // setters

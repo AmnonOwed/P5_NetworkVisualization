@@ -1,17 +1,20 @@
 
 class NetworkIcon {
-  boolean iconExists;
+  boolean exists;
   color nColor, tColor;
   PVector tabPosDim;
   PShape iconShape;
 
   NetworkIcon(String networkPath, String networkName) {
-    String iconPath = networkPath + networkName + "-icon.svg";    
-    iconExists = new File(iconPath).isFile();
-    if (iconExists) {
-      iconShape = loadShape(iconPath);
+    String path = networkPath + networkName + "-icon.svg";
+    exists = new File(path).isFile();
+    if (exists) {
+      iconShape = loadShape(path);
       iconShape.disableStyle();
     } else {
+      if (bDebug) {
+        println("Error in network [" + networkName + "] : no svg icon found >> creating custom icon");
+      }
       iconShape = createCustomIcon();
     }
     nColor = color(0);
@@ -20,7 +23,7 @@ class NetworkIcon {
   }
 
   void display(int x, int y, int w, int h) {
-    if (iconExists) { 
+    if (exists) { 
       fill(nColor); 
       stroke(nColor);
     } else { 
@@ -30,7 +33,7 @@ class NetworkIcon {
   }
   
   void displayTab() {
-    if (iconExists) {
+    if (exists) {
       fill(tColor);
       stroke(tColor);
     } else {

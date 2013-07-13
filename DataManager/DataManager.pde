@@ -32,16 +32,17 @@
 import controlP5.*;
 // relevant Scribe imports
 
-// The central path on YOUR computer where the local data for all networks is stored (keys, user data, images)
-// Each individual network folder will have it's 'Networkname' and contain:
-// - a file "Networkname-keys.json" as created with the 'CreateKeysJSON' sketch
-// - a file "Networkname-icon.svg" with an SVG icon that represents the network
-// - a subfolder 'images' that stores image data from the network (for example avatars) locally
-// - a subfolder 'users' that stores user data from the network in JSON format locally
+// The central path on YOUR computer which contains all the network folders (e.g. Twitter, Vimeo)
+// Each network folder contains resources (svg icon, keys, methods) and stores local data (user data, images)
+// A network folder called 'NetworkName' should contain:
+// - a file "NetworkName-icon.svg" with an SVG icon that represents the network
+// - a file "NetworkName-keys.json" as created with the 'CreateKeysJSON' sketch
+// - a file "NetworkName-methods.json" which contains the network API's method & parameter list (tbd)
 String localPath = "C:/Documents and Settings/mainframe/My Documents/ProcessingSources/Networks/";
 
-boolean bFullScreen = false;
-boolean bDebug = true;
+boolean bFullScreen = false; // toggle fullscreen
+boolean bDebug = false; // toggle debug mode to print additional info to the console
+boolean bNoKeyNetworkTabs = true; // toggle whether networks without authentication keys get a tab in the gui
 int smoothLevel = 8;
 
 NetworkManager nMan;
