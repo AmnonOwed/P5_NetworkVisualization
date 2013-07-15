@@ -37,7 +37,7 @@ import controlP5.*;
 // A network folder called 'NetworkName' should contain:
 // - a file "NetworkName-icon.svg" with an SVG icon that represents the network
 // - a file "NetworkName-keys.json" as created with the 'CreateKeysJSON' sketch
-// - a file "NetworkName-methods.json" which contains the network API's method & parameter list (tbd)
+// - a file "NetworkName-methods.json" as created with the 'CreateMethodsJSON' sketch
 String localPath = "C:/Documents and Settings/mainframe/My Documents/ProcessingSources/Networks/";
 
 boolean bFullScreen = false; // toggle fullscreen

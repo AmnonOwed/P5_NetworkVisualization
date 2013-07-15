@@ -7,14 +7,13 @@ class NetworkApi {
     exists = new File(path).isFile();
     if (exists) {
       JSONObject json = loadJSONObject(path);
-      String NETWORK = json.getString("NETWORK");
-      if (NETWORK.equals(networkName)) {
-        // load api methods from JSON file here
-        // todo: determine how to store methods in JSON file
+      String networkNameJSON = json.getString("Network Name");
+      if (networkNameJSON.equals(networkName)) {
+        // todo: load api methods from JSON file
       } else {
         exists = false;
         if (bDebug) {
-          println("Error in network [" + networkName + "] : unmatching network name in JSON methods file (" + NETWORK + ")");
+          println("Error in network [" + networkName + "] : unmatching network name in JSON methods file (" + networkNameJSON + ")");
         }
       }
     } else {

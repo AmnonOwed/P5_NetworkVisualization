@@ -12,7 +12,7 @@
  USAGE:
  1. Copy-paste the relevant URL into the sketch.
  2. Run once.
- 3. The JSON file is saved to the data folder. [not yet implemented in this version]
+ 3. The JSON file is saved to the data folder.
  
  Built with Processing 2.0.1
 
@@ -30,11 +30,13 @@ import java.util.*;
 final String urlFullVimeo = "http://developer.vimeo.com/apis/advanced/methods/";
 final String urlFullTwitter = "https://dev.twitter.com/docs/api/1.1/";
 
+boolean bDebug = false; // toggle debug mode to get console feedback
+
 void setup() {
-  Api api = new ApiVimeo(urlFullVimeo);
 //  Api api = new ApiTwitter(urlFullTwitter);
-  RetreiveMethods.network(api);
-  println("Exit");
+  Api api = new ApiVimeo(urlFullVimeo);
+  api.retrieve();
+  api.save();
   exit();
 }
 

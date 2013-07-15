@@ -10,47 +10,60 @@ class ApiTwitter extends Api {
   }
 
   @Override
-  void getMethod(String methodUrl) {
-    Document doc = null;
+  JSONObject getMethod(String methodUrl) {
+    JSONObject method = null;
   
-    try {
-      doc = Jsoup.connect(methodUrl).get();
-      println("Loaded: " + methodUrl);
-    } catch (IOException e) {
-      println("Not found: " + methodUrl);
-    }
+    Document doc = getPage(methodUrl);
     
     if (doc != null) {
-      println("Title: " + doc.title());
-      println();
+      if (bDebug) { println("Title: " + doc.title() + "\n"); }
+      method = new JSONObject();
   
       String methodName = doc.select("h1").first().html();
-      println("Method Name: " + methodName);
-  
+      if (bDebug) { println("Method Name: " + methodName); }
+      method.setString("Name", methodName);
+
       String methodDescription = doc.select("p").first().html();
       methodDescription = methodDescription.replace("<tt>", "");
       methodDescription = methodDescription.replace("</tt>", "");
-      println("Method Description: " + methodDescription);
+      if (bDebug) { println("Method Description: " + methodDescription); }
+      method.setString("Description", methodDescription);
   
-      println("Method Documentation: " + methodUrl);
-  
+      if (bDebug) { println("Method Documentation: " + methodUrl); }
+      method.setString("Documentation", methodUrl);
+
       String endpoint = doc.select("h2 ~ div.odd").first().html();
-      println("Method Endpoint: " + endpoint);
+      if (bDebug) { println("Method Endpoint: " + endpoint); }
+      method.setString("Endpoint", endpoint);
   
-      println();
+      JSONArray parameters = new JSONArray();
+
+      if (bDebug) { println(); }
   
-      Elements parameters = doc.select("div.parameter");
-      for (Element parameter : parameters) {
-        Element param = parameter.select("span.param").first();
-        println("Parameter Name: " + param.ownText());
-        String description = parameter.select("p").first().html();
+      Elements parameterTable = doc.select("div.parameter");
+      for (Element parameterElement : parameterTable) {
+        JSONObject parameter = new JSONObject();
+
+        Element param = parameterElement.select("span.param").first();
+        String name = param.ownText();
+        if (bDebug) { println("Parameter Name: " + name); }
+        parameter.setString("Name", name);
+
+        String description = parameterElement.select("p").first().html();
         description = description.replace("<tt>", "");
         description = description.replace("</tt>", "");
-        println("Parameter Description: " + description);
-        println("Parameter Required: " + param.html().contains("required"));
-        println();
+        if (bDebug) { println("Parameter Description: " + description); }
+        parameter.setString("Description", description);
+
+        boolean required = param.html().contains("required");
+        if (bDebug) { println("Parameter Required: " + required + "\n"); }
+        parameter.setBoolean("Required", true);
+
+        parameters.append(parameter);
       }
+      method.setJSONArray("Parameters", parameters);
     }
+    return method;
   }
 
   @Override
