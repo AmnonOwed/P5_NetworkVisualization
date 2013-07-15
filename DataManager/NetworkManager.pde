@@ -63,7 +63,7 @@ class NetworkManager {
       "NetworkName",
       "Has SVG Icon",
       "Has Authentication Keys",
-      "Had API Methods",
+      "Has API Methods",
       "Has GUI Tab"
     };
     
@@ -142,7 +142,7 @@ class NetworkManager {
   String getSolution(String networkName, String problem) {
     if (problem.equals("Has SVG Icon")) { return "Place '" + networkName + "-icon.svg' in '" + localPath + networkName +"/'"; }
     if (problem.equals("Has Authentication Keys")) { return "Place '" + networkName + "-keys.json' in '" + localPath + networkName +"/'"; }
-    if (problem.equals("Had API Methods")) { return "Place '" + networkName + "-methods.json' in '" + localPath + networkName +"/'"; }
+    if (problem.equals("Has API Methods")) { return "Place '" + networkName + "-methods.json' in '" + localPath + networkName +"/'"; }
     if (problem.equals("Has GUI Tab")) { return "Set bNoKeyNetworkTabs to true or place '" + networkName + "-keys.json' in '" + localPath + networkName +"/'"; }
     return "Problem not recognised.";
   }

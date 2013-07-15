@@ -35,7 +35,10 @@ Code is work-in-progress, no warranties, no guarantees, shared in the spirit of 
 Code written in Processing 2.0.1.
 
 ####CreateKeysJSON
-Small utility sketch that saves the 4 required authentication strings and the network name in a JSON file.
+Utility sketch that saves the 4 required authentication strings and the network name in a JSON file.
+
+####CreateMethodsJSON
+Utility sketch that saves the network API's specific methods and parameters in a JSON file (using jsoup HTML parser).
 
 ####DataManager
 I will be building this sketch from the ground up to handle authentication, API requests, local data caching, etc.

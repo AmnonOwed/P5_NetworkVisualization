@@ -42,7 +42,7 @@ String localPath = "C:/Documents and Settings/mainframe/My Documents/ProcessingS
 
 boolean bFullScreen = false; // toggle fullscreen
 boolean bDebug = false; // toggle debug mode to print additional info to the console
-boolean bNoKeyNetworkTabs = true; // toggle whether networks without authentication keys get a tab in the gui
+boolean bNoKeyNetworkTabs = false; // toggle whether networks without authentication keys get a tab in the gui
 int smoothLevel = 8;
 
 NetworkManager nMan;
