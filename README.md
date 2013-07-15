@@ -38,7 +38,7 @@ Code written in Processing 2.0.1.
 Utility sketch that saves the 4 required authentication strings and the network name in a JSON file.
 
 ####CreateMethodsJSON
-Utility sketch that saves the network API's specific methods and parameters in a JSON file (using jsoup HTML parser).
+Utility sketch that saves the network API's specific methods and parameters in a JSON file.
 
 ####DataManager
 I will be building this sketch from the ground up to handle authentication, API requests, local data caching, etc.
