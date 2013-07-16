@@ -61,3 +61,7 @@ void draw() {
   drawGUI();
 }
 
+boolean sketchFullScreen() {
+  return bFullScreen;
+}
+

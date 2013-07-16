@@ -57,7 +57,7 @@ class ApiTwitter extends Api {
 
         boolean required = param.html().contains("required");
         if (bDebug) { println("Parameter Required: " + required + "\n"); }
-        parameter.setBoolean("Required", true);
+        parameter.setBoolean("Required", required);
 
         parameters.append(parameter);
       }
