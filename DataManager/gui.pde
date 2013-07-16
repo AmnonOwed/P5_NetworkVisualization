@@ -41,7 +41,6 @@ void setupTabsForLocalNetworks() {
   }
   
   if (tabList.size() > 0) {
-    cp5.getTab("default").setVisible(false);
     int maxWidth = width-tabWidthAddNetwork+5;
     int w = (maxWidth-(tabList.size()-1))/tabList.size()-3;
     int h = tabHeight;
@@ -57,10 +56,11 @@ void setupTabsForLocalNetworks() {
       PVector tabIconPosDim = new PVector((w+4)*i+4, 4, tabHeight-8);
       network.setTabIconPosDim(tabIconPosDim);
     }
-    cp5.addTab("Add Network").activateEvent(true).setWidth(tabWidthAddNetwork).setHeight(h).getCaptionLabel().align(LEFT, CENTER).set("+ Add Network");
-    currentTab = "Add Network";
-    cp5.getTab(currentTab).bringToFront();
   }
+  cp5.getTab("default").setVisible(false);
+  cp5.addTab("Add Network").activateEvent(true).setWidth(tabWidthAddNetwork).setHeight(tabHeight).getCaptionLabel().align(LEFT, CENTER).set("+ Add Network");
+  currentTab = "Add Network";
+  cp5.getTab(currentTab).bringToFront();
 }
 
 void preRenderGUI() {
