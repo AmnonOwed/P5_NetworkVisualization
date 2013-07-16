@@ -1,0 +1,3041 @@
+{
+  "DateTime": "Tue Jul 16 18:47:26 CEST 2013",
+  "Methods": [
+    {
+      "Name": "vimeo.activity.happenedToUser",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.activity.happenedToUser",
+      "Description": "Get a list of activity on a user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.activity.userDid",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.activity.userDid",
+      "Description": "Get a list of things that a user did.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.addToWatchLater",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.addToWatchLater",
+      "Description": "Add a video to the watch later album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.addVideo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.addVideo",
+      "Description": "Add a video to an album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.create",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "description",
+          "Required": false,
+          "Description": "The description for the album.",
+          "Type": "string"
+        },
+        {
+          "Name": "title",
+          "Required": true,
+          "Description": "The title of the album.",
+          "Type": "string"
+        },
+        {
+          "Name": "videos",
+          "Required": false,
+          "Description": "A comma-separated list of video IDs to add to the album.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.create",
+      "Description": "Create an album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.delete",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.delete",
+      "Description": "Permanently delete an album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.getAll",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.getAll",
+      "Description": "Get a list of a user's albums.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.getVideos",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "password",
+          "Required": true,
+          "Description": "The password for the album (Not needed if the album is public or if the authenticated user is the owner).",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.getVideos",
+      "Description": "Get a list of the videos in an album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.getWatchLater",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.getWatchLater",
+      "Description": "Get the list of videos in a user's Watch Later album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.removeFromWatchLater",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.removeFromWatchLater",
+      "Description": "Remove a video from the watch later album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.removeVideo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.removeVideo",
+      "Description": "Remove a video from an album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.setDescription",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "description",
+          "Required": true,
+          "Description": "The new description (can be blank).",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.setDescription",
+      "Description": "Set the description for an album, overwriting the previous description.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.setPassword",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "password",
+          "Required": true,
+          "Description": "The password for the album. Set to empty to remove the password.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.setPassword",
+      "Description": "Set or clear the password for an album.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.albums.setTitle",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "album_id",
+          "Required": true,
+          "Description": "The ID of the album.",
+          "Type": "int"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "title",
+          "Required": true,
+          "Description": "The new title.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.albums.setTitle",
+      "Description": "Set the title of an album, overwriting the previous title.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getAll",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getAll",
+      "Description": "Get a list of all categories.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getInfo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "category",
+          "Required": true,
+          "Description": "The name of the category.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getInfo",
+      "Description": "Get information for a category.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getRelatedGroups",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "category",
+          "Required": true,
+          "Description": "The name of the category.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getRelatedGroups",
+      "Description": "Get a list of related groups for a category.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getRelatedPeople",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "category",
+          "Required": true,
+          "Description": "The name of the category.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getRelatedPeople",
+      "Description": "Get a list of related people for a category.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getRelatedTags",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "category",
+          "Required": true,
+          "Description": "The name of the category.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getRelatedTags",
+      "Description": "Get a list of related tags for a category.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getRelatedVideos",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "category",
+          "Required": true,
+          "Description": "The name of the category.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getRelatedVideos",
+      "Description": "Get a list of related videos for a category.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.addVideo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.addVideo",
+      "Description": "Add a video to a channel.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.getAll",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, alphabetical, most_videos, most_subscribed, or most_recently_updated.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.getAll",
+      "Description": "Get a list of all public channels.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.getInfo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.getInfo",
+      "Description": "Get the information on a single channel.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.getModerated",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, alphabetical, most_videos, most_subscribed, or most_recently_updated.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.getModerated",
+      "Description": "Get a list of the channels that a user moderates.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.getModerators",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.getModerators",
+      "Description": "Get a list of the channel's moderators.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.getSubscribers",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.getSubscribers",
+      "Description": "Get a list of the channel's subscribers.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.getVideos",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": false,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.getVideos",
+      "Description": "Get a list of the videos in a channel.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.removeVideo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.removeVideo",
+      "Description": "Remove a video from a channel.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.subscribe",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.subscribe",
+      "Description": "Subscribe a user to a channel.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.channels.unsubscribe",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "channel_id",
+          "Required": true,
+          "Description": "The numeric id of the channel or its url name.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.channels.unsubscribe",
+      "Description": "Unsubscribe a user from a channel.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.contacts.getAll",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": true,
+          "Description": "Method to sort by: most_credited, alphabetical, oldest, online or newest.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.contacts.getAll",
+      "Description": "Get a list of all contacts.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.contacts.getMutual",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.contacts.getMutual",
+      "Description": "Get a list of all mutual contacts.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.contacts.getOnline",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.contacts.getOnline",
+      "Description": "Get a list of all online contacts.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.contacts.getWhoAdded",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": true,
+          "Description": "Method to sort by: newest, oldest, alphabetical, most_credited",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.contacts.getWhoAdded",
+      "Description": "Get a list of all users who have added you as a contact.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.addVideo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The group to add the video to. The user must be joined to the group. This can be either the ID of the group, or the name in the URL.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video to add to the group.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.addVideo",
+      "Description": "Add a video to a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.removeVideo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The group to remove the video from. The user must be joined to the group. This can be either the ID of the group, or the name in the URL.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video to remove from the group.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.removeVideo",
+      "Description": "Remove a video from a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getAddable",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": true,
+          "Description": "Method to sort by: newest, oldest, alphabetical, most_videos, or most_subscribed.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getAddable",
+      "Description": "Get a list of the groups available to add a video to.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getAll",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": false,
+          "Description": "The ID number or username of the user.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": true,
+          "Description": "Method to sort by: newest, oldest, alphabetical, most_videos, or most_subscribed.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getAll",
+      "Description": "Get a list of all public groups, or if a user is provided, a list of all groups that user is a member of.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getInfo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getInfo",
+      "Description": "Get information for a specific group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getMembers",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, or alphabetical.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getMembers",
+      "Description": "Get a list of the members of a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getModerators",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getModerators",
+      "Description": "Get a list of the group's moderators.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getVideoComments",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getVideoComments",
+      "Description": "Get a list of the comments on a video in a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.getVideos",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, featured, most_played, most_commented, most_liked, or random.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.getVideos",
+      "Description": "Get a list of the videos added to a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.join",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.join",
+      "Description": "Join a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.leave",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.leave",
+      "Description": "Leave a group.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.forums.getTopicComments",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "topic_id",
+          "Required": true,
+          "Description": "The group forum topic ID.",
+          "Type": "int"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.forums.getTopicComments",
+      "Description": "Get a list of comments in a group forum topic.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.groups.forums.getTopics",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "group_id",
+          "Required": true,
+          "Description": "The numeric id of the group or its url name.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.groups.forums.getTopics",
+      "Description": "Get a list of topics in a group forum.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.oauth.checkAccessToken",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.oauth.checkAccessToken",
+      "Description": "Return the credentials attached to an Access Token.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.addContact",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.addContact",
+      "Description": "Add the specified user as a contact.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.addSubscription",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user to subscribe to.",
+          "Type": "string"
+        },
+        {
+          "Name": "types",
+          "Required": true,
+          "Description": "The type of subscription to create. Options are &quot;likes&quot;, &quot;appears&quot; or &quot;uploads&quot; (comma-separated for multiple).",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.addSubscription",
+      "Description": "Subscribe to the specified user's videos.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.findByEmail",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "email",
+          "Required": true,
+          "Description": "The email of the user to search for (can also be a comma separated list).",
+          "Type": "string"
+        },
+        {
+          "Name": "find_email",
+          "Required": false,
+          "Description": "Also accepted instead of <code>email<\/code> for backwards compatibility.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.findByEmail",
+      "Description": "Find a user by their email address.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.getInfo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.getInfo",
+      "Description": "Get information about a user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.getPortraitUrls",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.getPortraitUrls",
+      "Description": "Get a list of the user's portraits.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.getSubscriptions",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.getSubscriptions",
+      "Description": "Get a list of the things a user is subscribed to.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.removeContact",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user.",
+          "Type": "mixed"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.removeContact",
+      "Description": "Remove a person from the user's contacts.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.people.removeSubscription",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "types",
+          "Required": true,
+          "Description": "The type of subscription to remove. Options are &quot;likes&quot;, &quot;appears&quot;, and &quot;uploads&quot; (comma-separated for multiple).",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.people.removeSubscription",
+      "Description": "Unsubscribe from a user's videos.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.test.echo",
+      "Parameters": [{
+        "Name": "method",
+        "Required": true,
+        "Description": "The name of the method.",
+        "Type": "string"
+      }],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.test.echo",
+      "Description": "This will just repeat back any parameters that you send.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.test.login",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.test.login",
+      "Description": "Is the user logged in?",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.test.null",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Required": false,
+          "Message": "Insufficient permissions",
+          "Explanation": "The user does not have permission to do that.",
+          "Code": "99"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.test.null",
+      "Description": "This is just a simple null/ping test.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.addCast",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.addCast",
+      "Description": "Add a specified user as a cast member to the video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.addPhotos",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "photo_urls",
+          "Required": true,
+          "Description": "A comma-separated list of Flickr photo ids, Flickr photo urls, and/or Picasa photo urls.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.addPhotos",
+      "Description": "Add Flickr and/or Picasa photos to a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.addTags",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "tags",
+          "Required": true,
+          "Description": "A comma-separated list of tags to add to the video.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.addTags",
+      "Description": "Add tags to a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.clearTags",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.clearTags",
+      "Description": "Remove all of the tags from a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.delete",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The video to permanently delete.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.delete",
+      "Description": "Permanently delete a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getAll",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getAll",
+      "Description": "Get all videos credited to a user (both uploaded and appears).",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getAppearsIn",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getAppearsIn",
+      "Description": "Get a list of videos that a user appears in.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getByTag",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "tag",
+          "Required": true,
+          "Description": "The tag to get",
+          "Type": "string"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: relevant, newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getByTag",
+      "Description": "Get a list of videos that have the specified tag.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getCast",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getCast",
+      "Description": "Get the cast members of a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getCollections",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getCollections",
+      "Description": "Get all the Albums, Channels and Groups a video is a member of.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getInfo",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getInfo",
+      "Description": "Get information on a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getLikers",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getLikers",
+      "Description": "Get a list of the users that have liked a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getLikes",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getLikes",
+      "Description": "Get a list of videos that the user likes.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getSubscriptions",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "offset",
+          "Required": false,
+          "Description": "The id provided in the subscription information for the last video on the previous page.",
+          "Type": "int"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getSubscriptions",
+      "Description": "Get a list of the subscribed videos for a user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getThumbnailUrls",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getThumbnailUrls",
+      "Description": "Get the URLs of a video's thumbnails.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.removeCast",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.removeCast",
+      "Description": "Remove a cast member from a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.removeTag",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "tag_id",
+          "Required": true,
+          "Description": "The ID of the tag to remove from the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.removeTag",
+      "Description": "Remove a tag from a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.search",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": false,
+          "Description": "The ID number or username of the user.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "query",
+          "Required": true,
+          "Description": "The search terms",
+          "Type": "string"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: relevant, newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.search",
+      "Description": "Search for videos.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.setDescription",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "description",
+          "Required": true,
+          "Description": "The new description (can be blank).",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.setDescription",
+      "Description": "Set the description for a video, overwriting the previous description.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.setDownloadPrivacy",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "download",
+          "Required": true,
+          "Description": "required True to allow downloads, false to disable downloads.",
+          "Type": "boolean"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.setDownloadPrivacy",
+      "Description": "Set the download privacy of a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.setLicense",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "license",
+          "Required": true,
+          "Description": "The license to set: by, by-sa, by-nd, by-nc, by-nc-sa, or by-nc-nd. Set to 0 for no license.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.setLicense",
+      "Description": "Set the Creative Commons license on a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.setLike",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "like",
+          "Required": true,
+          "Description": "If this is true, we will record that the user likes this video. If false, we will remove it from their liked videos.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.setLike",
+      "Description": "Set whether or not the user likes a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.setPrivacy",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "privacy",
+          "Required": true,
+          "Description": "The privacy setting to use.",
+          "Type": "string"
+        },
+        {
+          "Name": "users",
+          "Required": false,
+          "Description": "A comma-separated list of users who can view the video.",
+          "Type": "string"
+        },
+        {
+          "Name": "password",
+          "Required": false,
+          "Description": "The password to protect the video with.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.setPrivacy",
+      "Description": "Set the privacy of a video. The possible privacy settings are anybody, nobody, contacts, users, password, or disable.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.setTitle",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "title",
+          "Required": true,
+          "Description": "The new title. If left blank, title will be set to &quot;Untitled&quot;.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.setTitle",
+      "Description": "Sets the title of a video, overwriting the previous title.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.comments.addComment",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "comment_text",
+          "Required": true,
+          "Description": "The text of the comment.",
+          "Type": "string"
+        },
+        {
+          "Name": "reply_to_comment_id",
+          "Required": false,
+          "Description": "If this is a reply to another comment, include that comment's ID.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.comments.addComment",
+      "Description": "Add a comment to a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.comments.deleteComment",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "comment_id",
+          "Required": true,
+          "Description": "The ID of the comment to delete.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.comments.deleteComment",
+      "Description": "Delete a specific comment from a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.comments.editComment",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The video that has the comment.",
+          "Type": "int"
+        },
+        {
+          "Name": "comment_id",
+          "Required": true,
+          "Description": "The comment to edit.",
+          "Type": "int"
+        },
+        {
+          "Name": "comment_text",
+          "Required": true,
+          "Description": "The new text of the comment.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.comments.editComment",
+      "Description": "Edit the text of a comment posted to a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.comments.getList",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.comments.getList",
+      "Description": "Get a list of the comments on a video.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.embed.getPresets",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.embed.getPresets",
+      "Description": "Get the available embed presets for a user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.embed.setPreset",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "preset_id",
+          "Required": true,
+          "Description": "The embed preset ID",
+          "Type": "int"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.embed.setPreset",
+      "Description": "Set the embed preferences of a video using an embed preset.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.embed.setPrivacy",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": true,
+          "Description": "The ID of the video.",
+          "Type": "int"
+        },
+        {
+          "Name": "privacy",
+          "Required": true,
+          "Description": "The privacy setting to use. $privacy The privacy setting to use.",
+          "Type": "string"
+        },
+        {
+          "Name": "approved_domains",
+          "Required": false,
+          "Description": "A JSON-encoded list of allowed domains.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.embed.setPrivacy",
+      "Description": "Set the embed privacy settings for a video. The possible privacy settings are anywhere, nowhere, or approved. Only PRO accounts may be modified with this method.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.upload.getQuota",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.upload.getQuota",
+      "Description": "Get the space and number of HD uploads left for a user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.upload.getTicket",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "upload_method",
+          "Required": false,
+          "Description": "Either 'streaming' or 'post'. Defaults to 'post'.",
+          "Type": "string"
+        },
+        {
+          "Name": "video_id",
+          "Required": false,
+          "Description": "If replacing a video, pass this a video_id",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.upload.getTicket",
+      "Description": "Generate a new upload ticket for a new video or to replace an existing video. This ticket is good for one upload by one user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.upload.checkTicket",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "ticket_id",
+          "Required": true,
+          "Description": "The upload ticket",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.upload.checkTicket",
+      "Description": "Check to make sure an upload ticket is still valid.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.upload.verifyChunks",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "ticket_id",
+          "Required": true,
+          "Description": "The upload ticket",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.upload.verifyChunks",
+      "Description": "Verify that the chunks were uploaded properly.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.upload.complete",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "oauth_token",
+          "Required": true,
+          "Description": "The access token for the acting user.",
+          "Type": "string"
+        },
+        {
+          "Name": "ticket_id",
+          "Required": true,
+          "Description": "The upload ticket",
+          "Type": "string"
+        },
+        {
+          "Name": "filename",
+          "Required": true,
+          "Description": "The name of the file, including extension",
+          "Type": "string"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.upload.complete",
+      "Description": "Complete the upload process.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.videos.getUploaded",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "user_id",
+          "Required": true,
+          "Description": "The ID number or username of the user. A token may be used instead.",
+          "Type": "mixed"
+        },
+        {
+          "Name": "sort",
+          "Required": false,
+          "Description": "Method to sort by: newest, oldest, most_played, most_commented, or most_liked.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        },
+        {
+          "Name": "summary_response",
+          "Required": false,
+          "Description": "Set this parameter to get back more information.",
+          "Type": "bool"
+        },
+        {
+          "Name": "full_response",
+          "Required": false,
+          "Description": "Set this parameter to get back the full video information.",
+          "Type": "bool"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.videos.getUploaded",
+      "Description": "Get a list of videos uploaded by a user.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    },
+    {
+      "Name": "vimeo.categories.getRelatedChannels",
+      "Parameters": [
+        {
+          "Name": "method",
+          "Required": true,
+          "Description": "The name of the method.",
+          "Type": "string"
+        },
+        {
+          "Name": "category",
+          "Required": true,
+          "Description": "The name of the category.",
+          "Type": "string"
+        },
+        {
+          "Name": "page",
+          "Required": false,
+          "Description": "The page number to show.",
+          "Type": "int"
+        },
+        {
+          "Name": "per_page",
+          "Required": false,
+          "Description": "Number of items to show on each page. Max 50.",
+          "Type": "int"
+        }
+      ],
+      "Documentation": "http://developer.vimeo.com/apis/advanced/methods/vimeo.categories.getRelatedChannels",
+      "Description": "Get a list of related channels for a category.",
+      "Endpoint": "http://vimeo.com/api/rest/v2"
+    }
+  ],
+  "Application": {
+    "Name": "CreateMethodsJSON by Amnon Owed",
+    "Description": "The application can be used to parse methods and parameters of (social network) API's from HTML into a valid JSON file",
+    "URL": "https://github.com/AmnonOwed/P5_NetworkVisualization"
+  },
+  "Network Name": "Vimeo"
+}
