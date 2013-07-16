@@ -42,3 +42,6 @@ Utility sketch that saves the network API's specific methods and parameters in a
 
 ####DataManager
 I will be building this sketch from the ground up to handle authentication, API requests, local data caching, etc.
+
+####ExampleNetworks
+Some example Network folders to test the DataManager sketch (note: real icons & methods, but fake keys)
