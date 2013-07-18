@@ -45,3 +45,5 @@ I will be building this sketch from the ground up to handle authentication, API 
 
 ####ExampleNetworks
 Some example Network folders to test the DataManager sketch (note: real icons & methods, but fake keys)
+
++Git Extensions Test+
